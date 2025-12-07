@@ -50,7 +50,7 @@ public class Base {
 		
 		threadDriver.set(localDriver);
 		getDriver().manage().window().maximize();
-		getDriver(). manage().timeouts().implicitlyWait(Duration.ofSeconds(10000));
+		getDriver(). manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		getDriver().get("https://www.saucedemo.com/");
 	}
 	

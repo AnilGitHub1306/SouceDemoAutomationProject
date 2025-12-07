@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="ParallelSuite" parallel="classes" thread-count="3" >
-	
-  <test name="ChromeTest">
-	<parameter name="browserName" value="chrome"></parameter>
-    <classes>
-      <class name="com.soucedemo.tests.HomeTest"/>
-      <class name="com.soucedemo.tests.LoginTest"/>
-    </classes>
-  </test> 
-  
-  <test name="FirefoxTest">
+<suite name="ParallelSuite" parallel="tests" thread-count="3">
+
+<!--	<groups>
+		<run>
+			<include name="regression" />
+		</run>
+	</groups>-->
+	<test name="ChromeTest">
+
+		<parameter name="browserName" value="chrome"></parameter>
+		<classes>
+			<class name="com.soucedemo.tests.HomeTest" />
+			<class name="com.soucedemo.tests.LoginTest" />
+		</classes>
+	</test>
+
+	<!--
+ 
+ <test name="FirefoxTest">
 	<parameter name="browserName" value="firefox"></parameter>
     <classes>
       <class name="com.soucedemo.tests.HomeTest"/>
@@ -24,7 +32,8 @@
       <class name="com.soucedemo.tests.HomeTest"/>
       <class name="com.soucedemo.tests.LoginTest"/>
     </classes>
-  </test> 
-  
-  
-</suite> <!-- Suite -->
+    
+  </test> -->
+
+</suite> <!--
+Suite -->

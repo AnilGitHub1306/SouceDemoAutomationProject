@@ -14,7 +14,8 @@ public class HomeTest extends Base {
 	LoginPage lp;
 	HomePage hp;
 	
-	@Test(description = "TC014: Verify the title of the home page")
+	@Test(description = "TC014: Verify the title of the home page",
+			groups={"regression"})
 	public void homePageTitle()
 	{
 		lp = new LoginPage(getDriver());
@@ -28,7 +29,8 @@ public class HomeTest extends Base {
 		Assert.assertEquals(actualHomePageTitle,  expectedHomePageTitle);
 	}
 	
-	@Test(description = "TC015: Verify the url of the home page")
+	@Test(description = "TC015: Verify the url of the home page",
+			groups={"regression"})
 	public void homePageUrl()
 	{
 		lp = new LoginPage(getDriver());
