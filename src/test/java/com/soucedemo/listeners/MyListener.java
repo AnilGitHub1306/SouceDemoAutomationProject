@@ -23,7 +23,7 @@ public class MyListener implements ITestListener {
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		
+		System.out.println("screenshot taken ------");
 		String path = MyUtils.takeScreenshot(Base.getDriver(), result.getName());
 	}
 

@@ -36,7 +36,7 @@ public class HomeTest extends Base {
 	public void homePageUrl()
 	{
 		lp = new LoginPage(getDriver());
-		lp.setUsername("standard_user");
+		lp.setUsername("standard_user1");
 		lp.setPassword("secret_sauce");
 		lp.clickLoginButton();
 		

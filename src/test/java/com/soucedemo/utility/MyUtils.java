@@ -16,7 +16,7 @@ public class MyUtils {
 	{
 		try {
 		String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-		String filePath = System.getProperty("user.dir")+File.separator+"screenshots"+File.separator+"screenshotName"+File.separator+"_"+File.separator+timestamp+File.separator+".png";
+		String filePath = System.getProperty("user.dir")+File.separator+"screenshots"+File.separator+screenshotName+"_"+timestamp+".png";
 		
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File sourceFile = ts.getScreenshotAs(OutputType.FILE);

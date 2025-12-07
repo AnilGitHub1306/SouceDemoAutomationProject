@@ -18,7 +18,7 @@ public class LoginTest extends Base {
 	public void loginValidUsernameValidPassword()
 	{
 		lp = new LoginPage(getDriver());
-		lp.setUsername("standard_user1");
+		lp.setUsername("standard_user");
 		lp.setPassword("secret_sauce");
 		lp.clickLoginButton();
 	}
