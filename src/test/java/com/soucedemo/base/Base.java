@@ -2,6 +2,8 @@ package com.soucedemo.base;
 
 import java.time.Duration;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -15,6 +17,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Base {
 	
+	private static final Logger log = LogManager.getLogger(Base.class);
 	public static ThreadLocal <WebDriver> threadDriver= new ThreadLocal<>();
 	
 	public static WebDriver getDriver()
@@ -31,35 +34,55 @@ public class Base {
 		if(browserName.equalsIgnoreCase("chrome"))
 		{
 		WebDriverManager.chromedriver().setup();
+		log.info("===== Chrome browser is setup =====");
+		
 		localDriver = new ChromeDriver();
+		log.info("Chrome browser is open");
+		
 		}
 		else if(browserName.equalsIgnoreCase("firefox"))
 		{
 			WebDriverManager.firefoxdriver().setup();
+			log.info("===== Firefox browser is setup =====");
+			
 			localDriver = new FirefoxDriver();
+			log.info("Firefox browser is open");
 		}
 		else if(browserName.equalsIgnoreCase("edge"))
 		{
 			WebDriverManager.edgedriver().setup();
+			log.info("===== Edge browser is setup =====");
+			
 			localDriver = new EdgeDriver();
+			log.info("Edge browser is open");
 		}
 		else
 		{
+			log.info("Provide the correct browser name");
 			throw new IllegalArgumentException("Invalid browser name: " + browserName);
 		}
 		
 		threadDriver.set(localDriver);
+		
 		getDriver().manage().window().maximize();
+		log.info(browserName +" browser is maximise");
+		
 		getDriver(). manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		log.info("Implicit wait is setup");
+		
 		getDriver().get("https://www.saucedemo.com/");
+		log.info("Url is open");
 	}
 	
-	@AfterMethod
+
+	@AfterMethod()
 	public void tearDown() 
 	{
 		if(getDriver()!=null)
 		{
 			getDriver().quit();
+			log.info("browser is close");
+			
 			threadDriver.remove();
 		}
 		

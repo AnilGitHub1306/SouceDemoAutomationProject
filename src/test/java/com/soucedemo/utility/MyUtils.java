@@ -5,12 +5,16 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.io.FileHandler;
 
 public class MyUtils {
+	
+	private static final Logger log = LogManager.getLogger(MyUtils.class);
 	
 	public static String takeScreenshot(WebDriver driver, String screenshotName) 
 	{
@@ -22,6 +26,7 @@ public class MyUtils {
 		File sourceFile = ts.getScreenshotAs(OutputType.FILE);
 		File TargetFile = new File(filePath);
 		FileHandler.copy(sourceFile, TargetFile);
+		log.info("Test failed hence, Screenshot taken");
 		return filePath;
 		} 
 		catch (IOException e) {
