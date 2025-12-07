@@ -1,11 +1,14 @@
 package com.soucedemo.tests;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.soucedemo.base.Base;
+import com.soucedemo.listeners.MyListener;
 import com.soucedemo.pages.LoginPage;
 
+@Listeners(MyListener.class)
 public class LoginTest extends Base {
 	
 	LoginPage lp;
@@ -15,7 +18,7 @@ public class LoginTest extends Base {
 	public void loginValidUsernameValidPassword()
 	{
 		lp = new LoginPage(getDriver());
-		lp.setUsername("standard_user");
+		lp.setUsername("standard_user1");
 		lp.setPassword("secret_sauce");
 		lp.clickLoginButton();
 	}

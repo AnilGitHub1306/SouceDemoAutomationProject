@@ -3,12 +3,14 @@ package com.soucedemo.tests;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.soucedemo.base.Base;
+import com.soucedemo.listeners.MyListener;
 import com.soucedemo.pages.HomePage;
 import com.soucedemo.pages.LoginPage;
-
+@Listeners(MyListener.class)
 public class HomeTest extends Base {
 	
 	LoginPage lp;
