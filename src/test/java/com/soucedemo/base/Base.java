@@ -69,7 +69,7 @@ public class Base {
 		getDriver().manage().window().maximize();
 		log.info(browserName +" browser is maximise");
 		
-		getDriver(). manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		getDriver(). manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.parseInt(MyUtils.ConfigReader("implicitwait"))));
 		log.info("Implicit wait is setup");
 		
 		getDriver().get(MyUtils.ConfigReader("url"));

@@ -13,6 +13,7 @@ import com.soucedemo.base.Base;
 import com.soucedemo.listeners.MyListener;
 import com.soucedemo.pages.HomePage;
 import com.soucedemo.pages.LoginPage;
+import com.soucedemo.utility.MyUtils;
 @Listeners(MyListener.class)
 public class HomeTest extends Base {
 	
@@ -26,13 +27,14 @@ public class HomeTest extends Base {
 	public void homePageTitle()
 	{
 		lp = new LoginPage(getDriver());
-		lp.setUsername("standard_user");
-		lp.setPassword("secret_sauce");
+		lp.setUsername(MyUtils.ConfigReader("valid_username"));
+		lp.setPassword(MyUtils.ConfigReader("valid_password"));
 		lp.clickLoginButton();
 		
 		hp = new HomePage(getDriver());
+		
 		String actualHomePageTitle = hp.homePageTitle();
-		String expectedHomePageTitle = "Swag Labs";
+		String expectedHomePageTitle = MyUtils.ConfigReader("homepage_title");
 		Assert.assertEquals(actualHomePageTitle,  expectedHomePageTitle);
 		log.info("Actual home page title: "+actualHomePageTitle+" and "+"Expected home page title: "+expectedHomePageTitle+" is same");
 		
@@ -44,14 +46,14 @@ public class HomeTest extends Base {
 	public void homePageUrl()
 	{
 		lp = new LoginPage(getDriver());
-		lp.setUsername("standard_user");
-		lp.setPassword("secret_sauce");
+		lp.setUsername(MyUtils.ConfigReader("valid_username"));
+		lp.setPassword(MyUtils.ConfigReader("valid_password"));
 		lp.clickLoginButton();
 		
 		hp = new HomePage(getDriver());
 		String actualHomePageUrl = hp.homePageUrl();
 		System.out.println(actualHomePageUrl);
-		String expectedHomePageUrl = "https://www.saucedemo.com/inventory.html1";
+		String expectedHomePageUrl = MyUtils.ConfigReader("homepage_url");
 		Assert.assertEquals(actualHomePageUrl,  expectedHomePageUrl);
 		log.info("Actual home page url: "+actualHomePageUrl+" and "+"Expected home page url: "+expectedHomePageUrl+" is same");
 	}

@@ -10,6 +10,7 @@ import com.soucedemo.base.Base;
 import com.soucedemo.listeners.MyListener;
 import com.soucedemo.pages.HomePage;
 import com.soucedemo.pages.LoginPage;
+import com.soucedemo.utility.MyUtils;
 
 @Listeners(MyListener.class)
 public class LoginTest extends Base {
@@ -26,12 +27,12 @@ public class LoginTest extends Base {
 		lp = new LoginPage(getDriver());
 		log.info("Entering valid username and valid password");
 		
-		lp.setUsername("standard_user");
-		lp.setPassword("secret_sauce");
+		lp.setUsername(MyUtils.ConfigReader("valid_username"));
+		lp.setPassword(MyUtils.ConfigReader("valid_password"));
 		lp.clickLoginButton();
 		hp =new HomePage(Base.getDriver());
 		String expectedHomePageurl = hp.homePageUrl();
-		String actualUrl = "https://www.saucedemo.com/inventory.html";
+		String actualUrl = MyUtils.ConfigReader("homepage_url");
 		
 		Assert.assertEquals(expectedHomePageurl,actualUrl);
 		log.info("Actual and axpected url are same");
@@ -45,8 +46,8 @@ public class LoginTest extends Base {
 		
 		lp = new LoginPage(getDriver());
 		log.info("Entering valid username and invalid password");
-		lp.setUsername("standard_user");
-		lp.setPassword("123");
+		lp.setUsername(MyUtils.ConfigReader("valid_username"));
+		lp.setPassword(MyUtils.ConfigReader("invalid1_password"));
 		lp.clickLoginButton();
 		Assert.assertTrue(lp.errorMassageIsDisplayed());
 		log.info("Error massage is display");
@@ -61,8 +62,8 @@ public class LoginTest extends Base {
 	{
 		lp = new LoginPage(getDriver());
 		log.info("Entering invalid username and valid password");
-		lp.setUsername("abc");
-		lp.setPassword("secret_sauce");
+		lp.setUsername(MyUtils.ConfigReader("invalid_username1"));
+		lp.setPassword(MyUtils.ConfigReader("valid_password"));
 		lp.clickLoginButton();
 		Assert.assertTrue(lp.errorMassageIsDisplayed());
 		log.info("Error massage is display");
@@ -75,8 +76,8 @@ public class LoginTest extends Base {
 	{
 		lp = new LoginPage(getDriver());
 		log.info("Entering invalid username and invalid password");
-		lp.setUsername("abc");
-		lp.setPassword("123");
+		lp.setUsername(MyUtils.ConfigReader("invalid_username1"));
+		lp.setPassword(MyUtils.ConfigReader("invalid_username1"));
 		lp.clickLoginButton();
 		Assert.assertTrue(lp.errorMassageIsDisplayed());
 		log.info("Error massage is display");
@@ -89,8 +90,8 @@ public class LoginTest extends Base {
 	{
 		lp = new LoginPage(getDriver());
 		log.info("Entering empty username and valid password");
-		lp.setUsername("");
-		lp.setPassword("secret_sauce");
+		lp.setUsername(MyUtils.ConfigReader("invalid_username2"));
+		lp.setPassword(MyUtils.ConfigReader("valid_password"));
 		lp.clickLoginButton();
 		Assert.assertTrue(lp.errorMassageIsDisplayed());
 		log.info("Error massage is display");
@@ -103,8 +104,8 @@ public class LoginTest extends Base {
 	{
 		lp = new LoginPage(getDriver());
 		log.info("Entering empty username and invalid password");
-		lp.setUsername("");
-		lp.setPassword("123");
+		lp.setUsername(MyUtils.ConfigReader("invalid_username2"));
+		lp.setPassword(MyUtils.ConfigReader("valid_password1"));
 		lp.clickLoginButton();
 		Assert.assertTrue(lp.errorMassageIsDisplayed());
 		log.info("Error massage is display");
@@ -117,8 +118,8 @@ public class LoginTest extends Base {
 	{
 		lp = new LoginPage(getDriver());
 		log.info("Entering empty username and empty password");
-		lp.setUsername("");
-		lp.setPassword("");
+		lp.setUsername(MyUtils.ConfigReader("invalid_username2"));
+		lp.setPassword(MyUtils.ConfigReader("invalid_username2"));
 		lp.clickLoginButton();
 		boolean status = lp.errorMassageIsDisplayed();
 		Assert.assertTrue(status);
@@ -134,8 +135,8 @@ public class LoginTest extends Base {
 	{
 		lp = new LoginPage(getDriver());
 		log.info("Entering valid username and empty password");
-		lp.setUsername("standard_user");
-		lp.setPassword("");
+		lp.setUsername(MyUtils.ConfigReader("valid_username"));
+		lp.setPassword(MyUtils.ConfigReader("invalid_password2"));
 		lp.clickLoginButton();
 		Assert.assertTrue(lp.errorMassageIsDisplayed());
 		log.info("Error massage is display");
@@ -148,8 +149,8 @@ public class LoginTest extends Base {
 	{
 		lp = new LoginPage(getDriver());
 		log.info("Entering invalid username and empty password");
-		lp.setUsername("abc");
-		lp.setPassword("");
+		lp.setUsername(MyUtils.ConfigReader("invalid_username1"));
+		lp.setPassword(MyUtils.ConfigReader("invalid_password2"));
 		lp.clickLoginButton();
 		Assert.assertTrue(lp.errorMassageIsDisplayed());
 		log.info("Error massage is display");
