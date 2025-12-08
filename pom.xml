@@ -41,6 +41,13 @@
 			<artifactId>log4j-api</artifactId>
 			<version>2.22.1</version>
 		</dependency>
+		
+		<!-- Extent Report -->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>5.1.1</version>
+		</dependency>
 
 
 	</dependencies>

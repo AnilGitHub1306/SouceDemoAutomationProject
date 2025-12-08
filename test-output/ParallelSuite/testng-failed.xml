@@ -7,13 +7,13 @@
   <test thread-count="3" parallel="tests" name="ChromeTest(failed)">
     <parameter name="browserName" value="chrome"/>
     <classes>
-      <class name="com.soucedemo.tests.HomeTest">
+      <class name="com.soucedemo.tests.LoginTest">
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="homePageUrl"/>
+          <include name="loginValidUsernameValidPassword"/>
         </methods>
-      </class> <!-- com.soucedemo.tests.HomeTest -->
+      </class> <!-- com.soucedemo.tests.LoginTest -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [ParallelSuite] -->

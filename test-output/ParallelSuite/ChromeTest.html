@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>ChromeTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>14/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Dec 07 17:06:09 IST 2025</td>
+<td>Started on:</td><td>Sun Dec 07 21:42:11 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>14 seconds (14164 ms)</td>
+<tr><td>Total time:</td><td>76 seconds (76382 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,23 +76,23 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.soucedemo.tests.HomeTest.homePageUrl()'><b>homePageUrl</b><br>Test class: com.soucedemo.tests.HomeTest<br>Test method: TC015: Verify the url of the home page</td>
-<td><div><pre>java.lang.AssertionError: expected [https://www.saucedemo.com/inventory.html] but found [https://www.saucedemo.com/]
-	at com.soucedemo.tests.HomeTest.homePageUrl(HomeTest.java:47)
+<td title='com.soucedemo.tests.LoginTest.loginValidUsernameValidPassword()'><b>loginValidUsernameValidPassword</b><br>Test class: com.soucedemo.tests.LoginTest<br>Test method: TC001: Verify user is able to login with valid username and valid password</td>
+<td><div><pre>java.lang.AssertionError: expected [] but found [https://www.saucedemo.com/inventory.html]
+	at com.soucedemo.tests.LoginTest.loginValidUsernameValidPassword(LoginTest.java:36)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1745419587", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1745419587'><pre>java.lang.AssertionError: expected [https://www.saucedemo.com/inventory.html] but found [https://www.saucedemo.com/]
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1756660984", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1756660984'><pre>java.lang.AssertionError: expected [] but found [https://www.saucedemo.com/inventory.html]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at org.testng.Assert.assertEquals(Assert.java:666)
-	at com.soucedemo.tests.HomeTest.homePageUrl(HomeTest.java:47)
+	at com.soucedemo.tests.LoginTest.loginValidUsernameValidPassword(LoginTest.java:36)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -115,7 +115,7 @@ function toggleAllBoxes() {
 	at java.base/java.lang.Thread.run(Thread.java:1583)
 </pre></div></td>
 <td>0</td>
-<td>com.soucedemo.tests.HomeTest@7c7a06ec</td></tr>
+<td>com.soucedemo.tests.LoginTest@2cae1042</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -126,10 +126,75 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='com.soucedemo.tests.LoginTest.loginEmptyUsernameEmptyPassword()'><b>loginEmptyUsernameEmptyPassword</b><br>Test class: com.soucedemo.tests.LoginTest<br>Test method: TC007: Verify user is able to login with empty username and empty password</td>
+<td></td>
+<td>1</td>
+<td>com.soucedemo.tests.LoginTest@2cae1042</td></tr>
+<tr>
+<td title='com.soucedemo.tests.LoginTest.loginInvalidUsernameEptyPassword()'><b>loginInvalidUsernameEptyPassword</b><br>Test class: com.soucedemo.tests.LoginTest<br>Test method: TC009: Verify user is able to login with invalid username and empty password</td>
+<td></td>
+<td>1</td>
+<td>com.soucedemo.tests.LoginTest@2cae1042</td></tr>
+<tr>
+<td title='com.soucedemo.tests.HomeTest.homePageUrl()'><b>homePageUrl</b><br>Test class: com.soucedemo.tests.HomeTest<br>Test method: TC015: Verify the url of the home page</td>
+<td></td>
+<td>1</td>
+<td>com.soucedemo.tests.HomeTest@3dd1dc90</td></tr>
+<tr>
+<td title='com.soucedemo.tests.LoginTest.loginValidUsernameEmptyPassword()'><b>loginValidUsernameEmptyPassword</b><br>Test class: com.soucedemo.tests.LoginTest<br>Test method: TC008: Verify user is able to login with valid username and empty password</td>
+<td></td>
+<td>0</td>
+<td>com.soucedemo.tests.LoginTest@2cae1042</td></tr>
+<tr>
+<td title='com.soucedemo.tests.LoginTest.loginInvalidUsernameValidPassword()'><b>loginInvalidUsernameValidPassword</b><br>Test class: com.soucedemo.tests.LoginTest<br>Test method: TC003: Verify user is able to login with invalid username and valid password</td>
+<td></td>
+<td>1</td>
+<td>com.soucedemo.tests.LoginTest@2cae1042</td></tr>
+<tr>
+<td title='com.soucedemo.tests.LoginTest.loginValidUsernameInvalidPassword()'><b>loginValidUsernameInvalidPassword</b><br>Test class: com.soucedemo.tests.LoginTest<br>Test method: TC002: Verify user is able to login with valid username and invalid password</td>
+<td></td>
+<td>1</td>
+<td>com.soucedemo.tests.LoginTest@2cae1042</td></tr>
+<tr>
+<td title='com.soucedemo.tests.LoginTest.loginPageLogo()'><b>loginPageLogo</b><br>Test class: com.soucedemo.tests.LoginTest<br>Test method: TC010: Verify swaglab logo present on login page</td>
+<td></td>
+<td>0</td>
+<td>com.soucedemo.tests.LoginTest@2cae1042</td></tr>
+<tr>
+<td title='com.soucedemo.tests.LoginTest.loginEmptyUsernameValidPassword()'><b>loginEmptyUsernameValidPassword</b><br>Test class: com.soucedemo.tests.LoginTest<br>Test method: TC005: Verify user is able to login with empty username and valid password</td>
+<td></td>
+<td>0</td>
+<td>com.soucedemo.tests.LoginTest@2cae1042</td></tr>
+<tr>
+<td title='com.soucedemo.tests.LoginTest.usrnameTextBoxOnLoginPage()'><b>usrnameTextBoxOnLoginPage</b><br>Test class: com.soucedemo.tests.LoginTest<br>Test method: TC011: Verify username textbox is present on login page</td>
+<td></td>
+<td>0</td>
+<td>com.soucedemo.tests.LoginTest@2cae1042</td></tr>
+<tr>
+<td title='com.soucedemo.tests.LoginTest.passwordTextBoxOnLoginPage()'><b>passwordTextBoxOnLoginPage</b><br>Test class: com.soucedemo.tests.LoginTest<br>Test method: TC012: Verify password textbox is present on login page</td>
+<td></td>
+<td>0</td>
+<td>com.soucedemo.tests.LoginTest@2cae1042</td></tr>
+<tr>
 <td title='com.soucedemo.tests.HomeTest.homePageTitle()'><b>homePageTitle</b><br>Test class: com.soucedemo.tests.HomeTest<br>Test method: TC014: Verify the title of the home page</td>
 <td></td>
 <td>1</td>
-<td>com.soucedemo.tests.HomeTest@7c7a06ec</td></tr>
+<td>com.soucedemo.tests.HomeTest@3dd1dc90</td></tr>
+<tr>
+<td title='com.soucedemo.tests.LoginTest.loginEmptyUsernameInvalidPassword()'><b>loginEmptyUsernameInvalidPassword</b><br>Test class: com.soucedemo.tests.LoginTest<br>Test method: TC006: Verify user is able to login with empty username and invalid password</td>
+<td></td>
+<td>1</td>
+<td>com.soucedemo.tests.LoginTest@2cae1042</td></tr>
+<tr>
+<td title='com.soucedemo.tests.LoginTest.loginButtonOnLoginPage()'><b>loginButtonOnLoginPage</b><br>Test class: com.soucedemo.tests.LoginTest<br>Test method: TC013: Verify login button is present on login page</td>
+<td></td>
+<td>0</td>
+<td>com.soucedemo.tests.LoginTest@2cae1042</td></tr>
+<tr>
+<td title='com.soucedemo.tests.LoginTest.loginInvalidUsernameInvalidPassword()'><b>loginInvalidUsernameInvalidPassword</b><br>Test class: com.soucedemo.tests.LoginTest<br>Test method: TC004: Verify user is able to login with invalid username and invalid password</td>
+<td></td>
+<td>1</td>
+<td>com.soucedemo.tests.LoginTest@2cae1042</td></tr>
 </table><p>
 </body>
 </html>

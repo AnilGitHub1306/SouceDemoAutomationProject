@@ -14,7 +14,7 @@
 		<parameter name="browserName" value="chrome"></parameter>
 		<classes>
 			<class name="com.soucedemo.tests.HomeTest" />
-	<!--		<class name="com.soucedemo.tests.LoginTest" /> -->
+			<class name="com.soucedemo.tests.LoginTest" /> 
 		</classes>
 	</test>
 

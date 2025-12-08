@@ -21,6 +21,7 @@ public class HomeTest extends Base {
 	private static final Logger log = LogManager.getLogger(HomeTest.class);
 	
 	@Test(description = "TC014: Verify the title of the home page",
+			priority=1,
 			groups={"regression"})
 	public void homePageTitle()
 	{
@@ -38,11 +39,12 @@ public class HomeTest extends Base {
 	}
 	
 	@Test(description = "TC015: Verify the url of the home page",
+			priority=2,
 			groups={"regression"})
 	public void homePageUrl()
 	{
 		lp = new LoginPage(getDriver());
-		lp.setUsername("standard_user1");
+		lp.setUsername("standard_user");
 		lp.setPassword("secret_sauce");
 		lp.clickLoginButton();
 		

@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="12" total="13" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-07T17:06:09 IST" name="ParallelSuite" finished-at="2025-12-07T17:06:23 IST" duration-ms="14164">
+  <suite started-at="2025-12-07T21:46:46 IST" name="Default suite" finished-at="2025-12-07T21:46:57 IST" duration-ms="11052">
     <groups>
+      <group name="highPriority">
+        <method signature="LoginTest.loginValidUsernameValidPassword()[pri:1, instance:com.soucedemo.tests.LoginTest@3dd1dc90]" name="loginValidUsernameValidPassword" class="com.soucedemo.tests.LoginTest"/>
+      </group> <!-- highPriority -->
       <group name="regression">
-        <method signature="HomeTest.homePageTitle()[pri:0, instance:com.soucedemo.tests.HomeTest@7c7a06ec]" name="homePageTitle" class="com.soucedemo.tests.HomeTest"/>
-        <method signature="HomeTest.homePageUrl()[pri:0, instance:com.soucedemo.tests.HomeTest@7c7a06ec]" name="homePageUrl" class="com.soucedemo.tests.HomeTest"/>
+        <method signature="LoginTest.loginValidUsernameValidPassword()[pri:1, instance:com.soucedemo.tests.LoginTest@3dd1dc90]" name="loginValidUsernameValidPassword" class="com.soucedemo.tests.LoginTest"/>
       </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="LoginTest.loginValidUsernameValidPassword()[pri:1, instance:com.soucedemo.tests.LoginTest@3dd1dc90]" name="loginValidUsernameValidPassword" class="com.soucedemo.tests.LoginTest"/>
+      </group> <!-- smoke -->
+      <group name="sanity">
+        <method signature="LoginTest.loginValidUsernameValidPassword()[pri:1, instance:com.soucedemo.tests.LoginTest@3dd1dc90]" name="loginValidUsernameValidPassword" class="com.soucedemo.tests.LoginTest"/>
+      </group> <!-- sanity -->
     </groups>
-    <test started-at="2025-12-07T17:06:09 IST" name="ChromeTest" finished-at="2025-12-07T17:06:23 IST" duration-ms="14164">
-      <class name="com.soucedemo.tests.HomeTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.soucedemo.tests.HomeTest@7c7a06ec]" started-at="2025-12-07T17:06:09 IST" name="setUp" finished-at="2025-12-07T17:06:16 IST" duration-ms="6650" status="PASS">
+    <test started-at="2025-12-07T21:46:46 IST" name="Default test" finished-at="2025-12-07T21:46:57 IST" duration-ms="11052">
+      <class name="com.soucedemo.tests.LoginTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.soucedemo.tests.LoginTest@3dd1dc90]" started-at="2025-12-07T21:46:46 IST" name="setUp" finished-at="2025-12-07T21:46:54 IST" duration-ms="7679" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,39 +30,20 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="homePageTitle()[pri:0, instance:com.soucedemo.tests.HomeTest@7c7a06ec]" started-at="2025-12-07T17:06:16 IST" name="homePageTitle" description="TC014: Verify the title of the home page" finished-at="2025-12-07T17:06:17 IST" duration-ms="1527" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- homePageTitle -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.soucedemo.tests.HomeTest@7c7a06ec]" started-at="2025-12-07T17:06:18 IST" name="tearDown" finished-at="2025-12-07T17:06:18 IST" duration-ms="800" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.soucedemo.tests.HomeTest@7c7a06ec]" started-at="2025-12-07T17:06:18 IST" name="setUp" finished-at="2025-12-07T17:06:22 IST" duration-ms="3664" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="homePageUrl()[pri:0, instance:com.soucedemo.tests.HomeTest@7c7a06ec]" started-at="2025-12-07T17:06:22 IST" name="homePageUrl" description="TC015: Verify the url of the home page" finished-at="2025-12-07T17:06:23 IST" duration-ms="809" status="FAIL">
+        <test-method signature="loginValidUsernameValidPassword()[pri:1, instance:com.soucedemo.tests.LoginTest@3dd1dc90]" started-at="2025-12-07T21:46:54 IST" name="loginValidUsernameValidPassword" description="TC001: Verify user is able to login with valid username and valid password" finished-at="2025-12-07T21:46:56 IST" duration-ms="1554" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [https://www.saucedemo.com/inventory.html] but found [https://www.saucedemo.com/]]]>
+              <![CDATA[expected [] but found [https://www.saucedemo.com/inventory.html]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [https://www.saucedemo.com/inventory.html] but found [https://www.saucedemo.com/]
+              <![CDATA[java.lang.AssertionError: expected [] but found [https://www.saucedemo.com/inventory.html]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1590)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:656)
 at org.testng.Assert.assertEquals(Assert.java:666)
-at com.soucedemo.tests.HomeTest.homePageUrl(HomeTest.java:47)
+at com.soucedemo.tests.LoginTest.loginValidUsernameValidPassword(LoginTest.java:36)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -69,23 +58,29 @@ at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 at org.testng.TestRunner.privateRun(TestRunner.java:741)
 at org.testng.TestRunner.run(TestRunner.java:616)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- homePageUrl -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.soucedemo.tests.HomeTest@7c7a06ec]" started-at="2025-12-07T17:06:23 IST" name="tearDown" finished-at="2025-12-07T17:06:23 IST" duration-ms="343" status="PASS">
+        </test-method> <!-- loginValidUsernameValidPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.soucedemo.tests.LoginTest@3dd1dc90]" started-at="2025-12-07T21:46:57 IST" name="tearDown" finished-at="2025-12-07T21:46:57 IST" duration-ms="680" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.soucedemo.tests.HomeTest -->
-    </test> <!-- ChromeTest -->
-  </suite> <!-- ParallelSuite -->
+      </class> <!-- com.soucedemo.tests.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

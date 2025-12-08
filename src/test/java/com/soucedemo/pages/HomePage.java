@@ -20,14 +20,14 @@ public class HomePage {
 	public String homePageTitle()
 	{
 		String homePageTitle = driver.getTitle();
-		log.info("Hpme page titel is: "+ homePageTitle);
+		log.info("Home page titel is: "+ homePageTitle);
 		return homePageTitle;
 	}
 	
 	public String homePageUrl() 
 	{
 		String homePageUrl = driver.getCurrentUrl();
-		log.info("Hpme page ur is: "+ homePageUrl);
+		log.info("Home page ur is: "+ homePageUrl);
 		return homePageUrl;
 	}
 	

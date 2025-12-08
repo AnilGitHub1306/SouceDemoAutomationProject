@@ -23,20 +23,20 @@ public class LoginPage {
 	@FindBy(id = "password") private WebElement passwordTextBox;
 	@FindBy(id = "login-button") private WebElement loginButton;
 	@FindBy(xpath="//div[text()='Swag Labs']") private WebElement swagLabLogo;
-	@FindBy(xpath="//*[@id='login_button_container']/div/form/div[3]/h3/text()") private WebElement errorMassage;
+	@FindBy(xpath="//div[@class='error-message-container error']") private WebElement errorMassage;
 	
 	
 	
 	public void setUsername(String username) 
 	{
-		log.info("Entering username "+username);
+		log.info("Entering username: "+username);
 		usernameTextBox.clear();
 		usernameTextBox.sendKeys(username);
 	} 
 	
 	public void setPassword(String password) 
 	{
-		log.info("Entering password "+password);
+		log.info("Entering password: "+password);
 		passwordTextBox.clear();
 		passwordTextBox.sendKeys(password);
 	} 
@@ -82,7 +82,7 @@ public class LoginPage {
 		log.info("Error massage displayed: "+status);
 		return status;
 	}
-	
+		
 	
 	
 }

@@ -81,7 +81,7 @@ public class Base {
 		if(getDriver()!=null)
 		{
 			getDriver().quit();
-			log.info("browser is close");
+			log.info("===== browser is close =====");
 			
 			threadDriver.remove();
 		}
