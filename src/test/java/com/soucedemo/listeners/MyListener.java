@@ -60,15 +60,13 @@ public class MyListener implements ITestListener {
 	@Override
 	public void onStart(ITestContext context) {
 		log.info("Test started for : "+context.getName());
-	
 	}
 
 	@Override
 	public void onFinish(ITestContext context) {
-	log.info("Test finished for : "+context.getName());
 	
-	ExtentManager.getExtent().flush();
-	
+		log.info("Test finished for : "+context.getName());
+		ExtentManager.getExtent().flush();
 	}
 
 }

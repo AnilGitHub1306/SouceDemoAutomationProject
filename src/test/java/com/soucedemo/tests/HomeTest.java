@@ -51,7 +51,7 @@ public class HomeTest extends Base {
 		hp = new HomePage(getDriver());
 		String actualHomePageUrl = hp.homePageUrl();
 		System.out.println(actualHomePageUrl);
-		String expectedHomePageUrl = "https://www.saucedemo.com/inventory.html";
+		String expectedHomePageUrl = "https://www.saucedemo.com/inventory.html1";
 		Assert.assertEquals(actualHomePageUrl,  expectedHomePageUrl);
 		log.info("Actual home page url: "+actualHomePageUrl+" and "+"Expected home page url: "+expectedHomePageUrl+" is same");
 	}

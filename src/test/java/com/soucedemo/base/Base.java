@@ -13,6 +13,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
+import com.soucedemo.utility.MyUtils;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Base {
@@ -70,7 +72,7 @@ public class Base {
 		getDriver(). manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		log.info("Implicit wait is setup");
 		
-		getDriver().get("https://www.saucedemo.com/");
+		getDriver().get(MyUtils.ConfigReader("url"));
 		log.info("Url is open");
 	}
 	

@@ -18,7 +18,7 @@
 		</classes>
 	</test>
 
-	<!--
+
  
  <test name="FirefoxTest">
 	<parameter name="browserName" value="firefox"></parameter>
@@ -35,7 +35,7 @@
       <class name="com.soucedemo.tests.LoginTest"/>
     </classes>
     
-  </test> -->
+  </test> 
 
 </suite> <!--
 Suite -->
